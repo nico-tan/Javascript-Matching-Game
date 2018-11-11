@@ -1,0 +1,25 @@
+.deck {
+  margin: 0 auto;
+  width: 85%;
+  background: red;
+
+  display: grid;
+  grid-template-columns: repeat(4, 10vw);
+  grid-template-rows: repeat(4, 10vw);
+  justify-content: center;
+  align-content: center;
+
+  padding: 1rem;
+
+  .card {
+        border: 1px solid #000;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        background: #ffcc00;
+        height: 4rem;
+        width: 4rem;
+  }
+}

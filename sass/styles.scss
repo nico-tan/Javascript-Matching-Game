@@ -1,0 +1,11 @@
+//compileCompressed: ../styles/styles.css
+// Above comment line is used for Atom SASS, can be ignored
+
+@charset "utf-8";
+
+// CSS Resets
+@import "resets";
+
+//CSS Documents
+@import "general";
+@import "gameboard";
