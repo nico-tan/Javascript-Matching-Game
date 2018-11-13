@@ -17,9 +17,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #000;
-        background: #ffcc00;
+        color: #fff;
+        background: #141214;
         height: 4rem;
         width: 4rem;
+        font-size: 33px;
   }
+
+  .card.show {
+    background: #02b3e4;
+    font-size: 33px;
+  }
+
+  // .card.disabled {
+  //   pointer-events: none;
+  // }
+
 }
