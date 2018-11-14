@@ -19,60 +19,140 @@
       <section class = "scorePanel">
         <span class = "moves">0</span> Moves
         <div class = "timer"></div>
-        <div class = restart onclick = ""></div>
-        <i class = "fa fa-repeat"></i>
+        <div class = restart onclick = "startGame">
+          <i class = "fa fa-repeat"></i>
+        </div>
       </section>
 
       <div class="deck" id = "card-deck">
-        <div class="card" type = "diamond">
-          <i class = "fa fa-diamond"></i>
+        <div class="card" data-name = "agility">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/agility.png" alt="Agility Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "plane">
-          <i class = "fa fa-paper-plane-o"></i>
+        <div class="card" data-name = "barter">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/barter.png" alt="Barter Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "anchor">
-          <i class = "fa fa-anchor"></i>
+        <div class="card" data-name = "charisma">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/charisma.png" alt="Charisma Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "bolt">
-          <i class = "fa fa-bolt"></i>
+        <div class="card" data-name = "endurance">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/endurance.png" alt="Endurance Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "cube">
-          <i class = "fa fa-cube"></i>
+        <div class="card" data-name = "intelligence">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/intelligence.png" alt="Intelligence Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "leaf">
-          <i class = "fa fa-leaf"></i>
+        <div class="card" data-name = "luck">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/luck.png" alt="Luck Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "bicycle">
-          <i class = "fa fa-bicycle"></i>
+        <div class="card" data-name = "perception">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/perception.png" alt="Perception Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "bomb">
-          <i class = "fa fa-bomb"></i>
+        <div class="card" data-name = "strength">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/strength.png" alt="Strength Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "diamond">
-          <i class = "fa fa-diamond"></i>
+        <div class="card" data-name = "agility">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/agility.png" alt="Agility Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "plane">
-          <i class = "fa fa-paper-plane-o"></i>
+        <div class="card" data-name = "barter">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/barter.png" alt="Barter Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "anchor">
-          <i class = "fa fa-anchor"></i>
+        <div class="card" data-name = "charisma">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/charisma.png" alt="Charisma Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "bolt">
-          <i class = "fa fa-bolt"></i>
+        <div class="card" data-name = "endurance">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/endurance.png" alt="Endurance Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "cube">
-          <i class = "fa fa-cube"></i>
+        <div class="card" data-name = "intelligence">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/intelligence.png" alt="Intelligence Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "leaf">
-          <i class = "fa fa-leaf"></i>
+        <div class="card" data-name = "luck">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/luck.png" alt="Luck Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "bicycle">
-          <i class = "fa fa-bicycle"></i>
+        <div class="card" data-name = "perception">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/perception.png" alt="Perception Bobblehead">
+          </div>
         </div>
-        <div class="card" type = "bomb">
-          <i class = "fa fa-bomb"></i>
+        <div class="card" data-name = "strength">
+          <div class = "card_face card_face-front">
+            <img src="images/special.png" alt="SPECIAL Card Back">
+          </div>
+          <div class = "card_face card_face-back" >
+            <img src="images/strength.png" alt="Strength Bobblehead">
+          </div>
         </div>
-      </div>
     </div>
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
