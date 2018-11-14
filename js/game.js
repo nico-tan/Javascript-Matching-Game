@@ -12,8 +12,8 @@ let matchedCard = document.getElementsByClassName("match");
 let moves = 0;
 let counter = document.querySelector(".moves");
 
-// Declare variables for endgame stats
-
+// Declare variables for matching sound
+var matchCue = document.getElementById("audio");
 
 // Declare array for matched cards
 var opened = [];
@@ -82,10 +82,7 @@ function cardOpen() {
     console.log("Second card clicked, checking for match");
     if(opened[0].dataset.name === opened[1].dataset.name){
       console.log("Tiles Matched");
-      // setTimeout(matched(), 6200);
-      // matched();
       setTimeout(match(), 5000);
-      // match();
     } else {
       console.log("Tiles didn't match");
       unmatched();
@@ -94,24 +91,8 @@ function cardOpen() {
 };
 
 // Function for when cards match
-function matched() {
-  opened[0].classList.add("match", "disabled");
-  opened[1].classList.add("match", "disabled");
-  disable();
-  setTimeout(function() {
-    opened[0].classList.remove("show", "open", "no-event");
-    opened[1].classList.remove("show", "open", "no-event");
-    enable();
-    opened = [];
-  }, 1100
-
-);
-  // opened[0].classList.remove("show", "open", "no-event");
-  // opened[1].classList.remove("show", "open", "no-event");
-  // opened = [];
-}
-
 function match() {
+  matchCue.play();
   opened[0].classList.add("match");
   opened[1].classList.add("match");
   opened = [];
@@ -172,7 +153,7 @@ var timer = document.querySelector(".timer");
 var interval;
 function startTimer() {
   interval = setInterval(function() {
-    timer.innerHTML = minute + "mins " + second + "secs";
+    timer.innerHTML = minute + " mins " + second + " secs";
     second++;
     if(second == 60) {
       minute++;
