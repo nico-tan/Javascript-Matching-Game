@@ -11,15 +11,69 @@
 
   padding: 1rem;
 
+  perspective: 900px;
+
   .card {
-        border: 1px solid #000;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #000;
-        background: #ffcc00;
-        height: 4rem;
-        width: 4rem;
+    // border: 1px solid #000;
+    color: #fff;
+    height: 10rem;
+    width: 10rem;
+
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
   }
+
+  // Flip card when selected
+  .card.open {
+    transform: rotateY(180deg);
+  }
+
+  .card.match {
+    // background: red;
+    // border: 4px solid blue;
+  }
+
+  .card.match .card_face-front img{
+    // display: none;
+  }
+
+  // Immediately when cards are a match
+  .card.match .card_face-back {
+    background: green !important;
+    // background: red !important;
+  }
+
+  .card_face {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+  }
+
+  .card_face-front {
+    background: blue;
+  }
+
+  .card_face-front img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  // Inside of card
+  .card_face-back {
+    transform: rotateY(180deg);
+  }
+
+  .card_face-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .card.disabled {
+    pointer-events: none;
+  }
+
 }
