@@ -173,6 +173,9 @@ function congratulations() {
     clearInterval(interval);
     finalTime = timer.innerHTML;
 
+    document.getElementById("finalMove").innerHTML = moves;
+    document.getElementById("totalTime").innerHTML = finalTime;
+
     console.log("It took you: " + finalTime + " to finish");
     console.log("It took you " + moves + " moves");
   };
