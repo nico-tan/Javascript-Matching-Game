@@ -15,6 +15,12 @@ let counter = document.querySelector(".moves");
 // Declare variables for matching sound
 var matchCue = document.getElementById("audio");
 
+// Declare popup close icon
+let closeicon = document.querySelector(".close");
+
+// Declare popup
+let popup = document.getElementById("gameover");
+
 // Declare array for matched cards
 var opened = [];
 
@@ -98,10 +104,6 @@ function match() {
   opened = [];
 }
 
-function resetMatch() {
-
-}
-
 // Function for when cards don't match
 function unmatched() {
   opened[0].classList.add("unmatched");
@@ -173,12 +175,30 @@ function congratulations() {
     clearInterval(interval);
     finalTime = timer.innerHTML;
 
+    popup.classList.add("show");
+
     document.getElementById("finalMove").innerHTML = moves;
     document.getElementById("totalTime").innerHTML = finalTime;
 
     console.log("It took you: " + finalTime + " to finish");
     console.log("It took you " + moves + " moves");
+
+    closePopup();
   };
+}
+
+// Function to close the end game display popup
+function closePopup() {
+  closeicon.addEventListener("click", function(e) {
+    popup.classList.remove("show");
+    startGame();
+  });
+}
+
+// Function for the play again button
+function playAgain() {
+  popup.classList.remove("show");
+  startGame();
 }
 
 // Add event handler for each card element

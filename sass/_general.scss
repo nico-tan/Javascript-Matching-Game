@@ -4,6 +4,11 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+
+  background-image: url("../images/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  // background-size: contain;
 }
 
 body {
@@ -12,6 +17,7 @@ body {
 
 .container {
   header {
+    font-weight: bold;
     text-align: center;
     font-size: 2em;
   }
