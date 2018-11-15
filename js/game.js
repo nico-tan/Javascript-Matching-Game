@@ -70,12 +70,9 @@ function startGame() {
 
 // Toggles open show class to display cards
 var displayCard = function() {
-  // console.log("Card Pressed");
   this.classList.toggle("open");
-  // this.classList.toggle("show");
   // This disables the card making it unclickable until it's closed
   this.classList.toggle("disabled");
-  // console.log("Card flipped, successfully disabled");
 };
 
 // Add opened cards to the opened list and check whether there's a match
