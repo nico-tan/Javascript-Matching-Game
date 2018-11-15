@@ -1,0 +1,19 @@
+.scorePanel {
+  // background: green;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 1.2em;
+
+  .restart {
+    float: right;
+    cursor: pointer;
+  }
+
+  .timer {
+    display: inline-block;
+    margin: 0 1rem;
+  }
+}

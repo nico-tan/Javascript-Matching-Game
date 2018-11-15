@@ -1,11 +1,16 @@
 .deck {
   margin: 0 auto;
-  width: 85%;
-  background: red;
+  width: 50%;
+  background: #ffdd99;
+  background: rgba(255, 221, 153, 0.7);
+  border-radius: 30px;
+  border: 3px solid #000;
+  box-shadow: 3px 3px #666;
 
   display: grid;
   grid-template-columns: repeat(4, 10vw);
   grid-template-rows: repeat(4, 10vw);
+  grid-gap: 5px;
   justify-content: center;
   align-content: center;
 
@@ -14,10 +19,9 @@
   perspective: 900px;
 
   .card {
-    // border: 1px solid #000;
     color: #fff;
-    height: 10rem;
-    width: 10rem;
+    // height: 10rem;
+    // width: 10rem;
 
     position: relative;
     transition: transform 1s;
@@ -40,11 +44,12 @@
 
   // Immediately when cards are a match
   .card.match .card_face-back {
-    background: green !important;
+    // background: green !important;
     // background: red !important;
   }
 
   .card_face {
+    border-radius: 20px;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -52,7 +57,7 @@
   }
 
   .card_face-front {
-    background: blue;
+    background: #80ffcc;
   }
 
   .card_face-front img{

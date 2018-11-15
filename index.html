@@ -13,13 +13,13 @@
   <body>
     <div class = "container">
       <header>
-        <h1>Memory Game</h1>
+        <h1>SPECIAL Memory Game</h1>
       </header>
 
       <section class = "scorePanel">
         <span class = "moves">0</span> Moves
         <div class = "timer"></div>
-        <div class = restart onclick = "startGame">
+        <div class = restart onclick = "startGame()">
           <i class = "fa fa-repeat"></i>
         </div>
       </section>
@@ -154,6 +154,21 @@
           </div>
         </div>
     </div>
+
+    <div id = "gameover" class= "overlay">
+      <div class = "popup">
+        <h1>Congratulations!!</h1>
+        <a class = "close" href="#">X</a>
+        <div class = "content">
+          <div class = "gameData">
+            <p>You made <span id="finalMove"> </span> moves </p>
+            <p>in <span id="totalTime"> </span> </p>
+          </div>
+        </div>
+        <button id="play-again" onclick = "playAgain()">Play Again</button>
+      </div>
+    </div>
+    <audio id = "audio" src="sounds/its_a_match.mp3"></audio>
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
