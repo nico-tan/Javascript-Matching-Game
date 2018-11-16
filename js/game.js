@@ -12,8 +12,12 @@ let matchedCard = document.getElementsByClassName("match");
 let moves = 0;
 let counter = document.querySelector(".moves");
 
-// Declare variables for matching sound
-var matchCue = document.getElementById("audio");
+// Declare variables for sounds
+var matchCue = document.getElementById("audioMatch");
+var mismatchCue = document.getElementById("audioMismatch");
+var winner = document.getElementById("audioWinner");
+let bgm = new Audio("../sounds/TranquilityLane.ogx");
+let bgmToggle = 1;
 
 // Declare popup close icon
 let closeicon = document.querySelector(".close");
@@ -46,6 +50,9 @@ function startGame() {
   // Shuffle cards
   cards = shuffle(cards);
 
+  // Play background music
+  initBG();
+
   for(var i = 0; i < cards.length; i++) {
     deck.innerHTML = "";
     [].forEach.call(cards, function(item) {
@@ -66,6 +73,26 @@ function startGame() {
   var timer = document.querySelector(".timer");
   timer.innerHTML = "0 mins 0 secs";
   clearInterval(interval);
+}
+
+// Initialize background music. Will loop when the music ends
+function initBG() {
+  bgm.addEventListener("ended", function() {
+    this.currentTime = 0;
+    this.play();
+  }, false);
+  bgm.play();
+}
+
+// Toggles the background music on/off
+function toggleBGM() {
+  if(bgmToggle){
+    bgm.pause();
+    bgmToggle = 0;
+  }else{
+    bgm.play();
+    bgmToggle = 1;
+  }
 }
 
 // Toggles open show class to display cards
@@ -103,6 +130,7 @@ function match() {
 
 // Function for when cards don't match
 function unmatched() {
+  mismatchCue.play();
   opened[0].classList.add("unmatched");
   opened[1].classList.add("unmatched");
   disable();
@@ -169,6 +197,7 @@ function startTimer() {
 // function to determine whether the win condition is met or not
 function congratulations() {
   if(matchedCard.length == 16){
+    winner.play();
     clearInterval(interval);
     finalTime = timer.innerHTML;
 
