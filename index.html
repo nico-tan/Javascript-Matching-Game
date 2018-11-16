@@ -30,6 +30,9 @@
         <div class = restart onclick = "startGame()">
           <i class = "fa fa-repeat"></i>
         </div>
+        <div class = "toggleVol" onclick = "toggleBGM()">
+          <i class = "fa fa-volume-up"></i>
+        </div>
       </section>
 
       <div class="deck" id = "card-deck">
@@ -176,7 +179,10 @@
         <button id="play-again" onclick = "playAgain()">Play Again</button>
       </div>
     </div>
-    <audio id = "audio" src="sounds/its_a_match.mp3"></audio>
+    <audio id = "audioMatch" src="sounds/its_a_match.mp3"></audio>
+    <audio id = "audioMismatch" src="sounds/not_a_match.ogx"></audio>
+    <audio id = "audioWinner" src="sounds/winner.ogx"></audio>
+    <audio id = "audioBG" src="sounds/TranquilityLane.ogx"></audio>
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
